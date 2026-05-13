@@ -11,7 +11,7 @@ public abstract class ProductoCarta
 
     private String codigo;
     private String nombre;
-    private String formato;
+    protected String formato;
     
 
     public ProductoCarta(String codigo, String nombre, String formato)

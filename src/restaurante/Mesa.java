@@ -39,7 +39,7 @@ public class Mesa {
 
                 String codigo = partes[0];
                 String nombre = partes[1];
-                String formato = partes[2].trim().toUpperCase();
+                String formato = partes[2].toUpperCase();
 
                 char tipo = codigo.charAt(0);
 
@@ -62,8 +62,10 @@ public class Mesa {
                     default:
                         System.out.println("No se ha podido leer.");
                 }
+                
 
             }
+            System.out.println("Carta cargada correctamente.....");
 
         } catch (Exception e) {
             System.out.println("Mensaje: " + e.getMessage());

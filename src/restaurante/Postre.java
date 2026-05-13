@@ -10,10 +10,7 @@ package restaurante;
  */
 public class Postre extends ProductoCarta {
 
-    enum Formato{
-        PORCION, TARRINA, TAZA
-    }
-    Formato formato;
+    
     
     
     public Postre(String codigo, String nombre, String formato) {
@@ -22,13 +19,13 @@ public class Postre extends ProductoCarta {
 
     @Override
     public float precio() {
-        switch (formato) {
-            case PORCION:
-                return 6f;
-            case TARRINA:
+        switch (formato.toUpperCase()) {
+            case "PORCION":
+                return 6.0f;
+            case "TARRINA":
                 return 4.5f;
-            case TAZA:
-                return 2f;
+            case "TAZA":
+                return 2.0f;
             default:
                 return 0;
         }

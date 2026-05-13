@@ -10,10 +10,7 @@ package restaurante;
  */
 public class Comida extends ProductoCarta {
 
-    enum Formato {
-        TAPA, MEDIA, RACION
-    }
-    Formato formato;
+    
 
     public Comida(String codigo, String nombre, String formato) {
         super(codigo, nombre, formato);
@@ -22,13 +19,13 @@ public class Comida extends ProductoCarta {
     @Override
     public float precio() {
 
-        switch (formato) {
-            case TAPA:
+        switch (formato.toUpperCase()) {
+            case "TAPA":
                 return 3.5f;
-            case MEDIA:
-                return 8f;
-            case RACION:
-                return 15f;
+            case "MEDIA":
+                return 8.0f;
+            case "RACION":
+                return 15.0f;
             default:
                 return 0;
         }
