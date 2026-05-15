@@ -183,6 +183,10 @@ public class Mesa {
         System.out.println("--------------------------------");
         System.out.printf("TOTAL; %.2f€%n", precioTotal());
     }
+    
+    public void borrarComanda(){
+            comandas.clear();
+    }
 
     @Override
     public String toString() {

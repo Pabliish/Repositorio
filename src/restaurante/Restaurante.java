@@ -46,7 +46,7 @@ public class Restaurante {
                         reservas.get(nMesa - 1).cargarComanda();
                         System.out.println("Comanda cargada correctamente.");
                     } else {
-                        System.out.println("Mesa no válida.");
+                        System.out.println("Mesa no valida.");
                     }
 
                     break;
@@ -82,7 +82,10 @@ public class Restaurante {
                     }
 
                     if (numM > 0 && numM <= reservas.size()) {
-                        //BORRAR COMANDA (HACER)
+                        reservas.get(numM-1).borrarComanda();
+                        System.out.println("-------------------------------\n"
+                                + "Comanda borrada exitosamente.\n"
+                                + "-------------------------------\n\n");
                     } else {
                         System.out.println("Mesa no encontrada");
                     }
@@ -113,7 +116,7 @@ public class Restaurante {
         System.out.println("6. Ver ticket de una mesa.");
         System.out.println("7. Borrar toda la comanda de una mesa.");
         System.out.println("0. Salir");
-        opcion = ES.leerEntero("\n¿Opción?: ");
+        opcion = ES.leerEntero("\nOpcion?: ");
 
         return opcion;
     }
