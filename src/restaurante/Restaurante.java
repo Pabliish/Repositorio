@@ -25,11 +25,13 @@ public class Restaurante {
             switch (opcion) {
                 case 1:
                     Mesa.verCarta();
+                    System.out.println("\n\n\n");
                     break;
                 case 2:
                     for (Mesa a : reservas) {
                         System.out.println(a.toString());
                     }
+                    System.out.println("\n\n\n");
                     break;
                 case 3:
                     System.out.println("Cuantas personas son para la reserva?");
@@ -48,6 +50,7 @@ public class Restaurante {
                     } else {
                         System.out.println("Mesa no valida.");
                     }
+                    System.out.println("\n\n\n");
 
                     break;
                 case 5:
@@ -62,6 +65,7 @@ public class Restaurante {
                     } else {
                         System.out.println("Mesa no encontrada");
                     }
+                    System.out.println("\n\n\n");
                     break;
                 case 6:
                     numM = ES.leerEntero("Numero de mesa (0 para salir): ");
@@ -74,6 +78,7 @@ public class Restaurante {
                     } else {
                         System.out.println("Mesa no encontrada");
                     }
+                    System.out.println("\n\n\n");
                     break;
                 case 7:
                     numM = ES.leerEntero("Numero de mesa (0 para salir): ");
@@ -89,17 +94,11 @@ public class Restaurante {
                     } else {
                         System.out.println("Mesa no encontrada");
                     }
+                    System.out.println("\n\n\n");
                     break;
             }
-            ///////////////////////
-            // Escribe tu código //
-            ///////////////////////
             opcion = menu();
         }
-
-        ///////////////////////
-        // Escribe tu código //
-        ///////////////////////
     }
 
     public static int menu() {
